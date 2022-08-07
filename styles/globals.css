@@ -1,26 +1,27 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply bg-sky-700 hover:bg-sky-600 rounded-md px-4 py-2 text-white cursor-pointer;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.btn-link {
+  @apply text-sky-700 hover:text-sky-600 cursor-pointer;
 }
 
-* {
-  box-sizing: border-box;
+.label {
+  @apply text-sm;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.field {
+  @apply border p-2 rounded outline-0 focus:ring-4 ring-sky-100 focus:border-sky-600;
+}
+
+.form-group {
+  @apply flex flex-col space-y-1;
+}
+
+.prose p {
+  @apply mb-2;
 }
